@@ -2,6 +2,7 @@
 
 $(function(){
 	
+<<<<<<< HEAD
 	if($('.ttip').length>0){
 		$('.ttip').tooltip();
 	}
@@ -763,10 +764,17 @@ $(function(){
 	}
 	
 	//ativa funções de movimentação
+=======
+	//executa
+	move();
+	
+	//sistema
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 	function move(){
 		$( ".dragg" ).draggable();
 	}
 	
+<<<<<<< HEAD
 	function Organizar(){
 		if(arrasta==true){
 			sortOff();
@@ -842,3 +850,6 @@ $(function(){
 	}
 	
 })
+=======
+});
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266

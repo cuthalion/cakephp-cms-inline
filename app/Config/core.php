@@ -7,12 +7,22 @@
  * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+<<<<<<< HEAD
  * Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
  * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+=======
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  * @link          http://cakephp.org CakePHP(tm) Project
  * @package       app.Config
  * @since         CakePHP(tm) v 0.2.9
@@ -32,6 +42,7 @@
  * In production mode, flash messages redirect after a time interval.
  * In development mode, you need to click the flash message to continue.
  */
+<<<<<<< HEAD
 	Configure::write('debug', 0);
 	
 	//Configure::write('MinifyAsset', true);
@@ -39,6 +50,13 @@
 /**
  * Configure the Error handler used to handle errors for your application.  By default
  * ErrorHandler::handleError() is used.  It will display errors using Debugger, when debug > 0
+=======
+	Configure::write('debug', 2);
+
+/**
+ * Configure the Error handler used to handle errors for your application. By default
+ * ErrorHandler::handleError() is used. It will display errors using Debugger, when debug > 0
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  * and log errors with CakeLog when debug = 0.
  *
  * Options:
@@ -58,9 +76,15 @@
 	));
 
 /**
+<<<<<<< HEAD
  * Configure the Exception handler used for uncaught exceptions.  By default,
  * ErrorHandler::handleException() is used. It will display a HTML page for the exception, and
  * while debug > 0, framework errors like Missing Controller will be displayed.  When debug = 0,
+=======
+ * Configure the Exception handler used for uncaught exceptions. By default,
+ * ErrorHandler::handleException() is used. It will display a HTML page for the exception, and
+ * while debug > 0, framework errors like Missing Controller will be displayed. When debug = 0,
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  * framework errors will be coerced into generic HTTP errors.
  *
  * Options:
@@ -68,7 +92,11 @@
  * - `handler` - callback - The callback to handle exceptions. You can set this to any callback type,
  *   including anonymous functions.
  *   Make sure you add App::uses('MyHandler', 'Error'); when using a custom handler class
+<<<<<<< HEAD
  * - `renderer` - string - The class responsible for rendering uncaught exceptions.  If you choose a custom class you
+=======
+ * - `renderer` - string - The class responsible for rendering uncaught exceptions. If you choose a custom class you
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  *   should place the file for that class in app/Lib/Error. This class needs to implement a render method.
  * - `log` - boolean - Should Exceptions be logged?
  *
@@ -94,7 +122,19 @@
  * /app/.htaccess
  * /app/webroot/.htaccess
  *
+<<<<<<< HEAD
  * And uncomment the App.baseUrl below:
+=======
+ * And uncomment the App.baseUrl below. But keep in mind
+ * that plugin assets such as images, CSS and Javascript files
+ * will not work without url rewriting!
+ * To work around this issue you should either symlink or copy
+ * the plugin assets into you app's webroot directory. This is
+ * recommended even when you are using mod_rewrite. Handling static
+ * assets through the Dispatcher is incredibly inefficient and
+ * included primarily as a development convenience - and
+ * thus not recommended for production applications.
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  */
 	//Configure::write('App.baseUrl', env('SCRIPT_NAME'));
 
@@ -114,7 +154,11 @@
  *	`manager_index()` and `/manager/controller/index`
  *
  */
+<<<<<<< HEAD
 	//Configure::write('Routing.prefixes', array('admin'));
+=======
+	Configure::write('Routing.prefixes', array('admin'));
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 
 /**
  * Turn off all caching application-wide.
@@ -134,10 +178,21 @@
 	//Configure::write('Cache.check', true);
 
 /**
+<<<<<<< HEAD
  * Defines the default error type when using the log() function. Used for
  * differentiating error logging and debugging. Currently PHP supports LOG_DEBUG.
  */
 	define('LOG_ERROR', LOG_ERR);
+=======
+ * Enable cache view prefixes.
+ *
+ * If set it will be prepended to the cache name for view file caching. This is
+ * helpful if you deploy the same application via multiple subdomains and languages,
+ * for instance. Each version can then have its own view cache namespace.
+ * Note: The final cache file name will then be `prefix_cachefilename`.
+ */
+	//Configure::write('Cache.viewPrefix', 'prefix');
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 
 /**
  * Session configuration.
@@ -155,8 +210,13 @@
  *    value to false, when dealing with older versions of IE, Chrome Frame or certain web-browsing devices and AJAX
  * - `Session.defaults` - The default configuration set to use as a basis for your session.
  *    There are four builtins: php, cake, cache, database.
+<<<<<<< HEAD
  * - `Session.handler` - Can be used to enable a custom session handler.  Expects an array of of callables,
  *    that can be used with `session_save_handler`.  Using this option will automatically add `session.save_handler`
+=======
+ * - `Session.handler` - Can be used to enable a custom session handler. Expects an array of callables,
+ *    that can be used with `session_save_handler`. Using this option will automatically add `session.save_handler`
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  *    to the ini array.
  * - `Session.autoRegenerate` - Enabling this setting, turns on automatic renewal of sessions, and
  *    sessionids that change frequently. See CakeSession::$requestCountdown.
@@ -177,6 +237,7 @@
  *
  */
 	Configure::write('Session', array(
+<<<<<<< HEAD
 		'defaults' 	=> 	'php'
 	));
 
@@ -189,15 +250,34 @@
  * A random string used in security hashing methods.
  */
 	Configure::write('Security.salt', 'HP88jLcU29BdATWF6Aw99ndw6hDPTEqfTAjQBaY7');
+=======
+		'defaults' => 'php'
+	));
+
+/**
+ * A random string used in security hashing methods.
+ */
+	//Configure::write('Security.salt', 'DYhG93b0qyJfIxfs2guVoUubWwvniR2G0FgaC9mi');
+	Configure::write('Security.salt', '2GGgmbZ2ZKW3to9a4eSEwPC5emaYfoGN6cu53gs9');
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 
 /**
  * A random numeric string (digits only) used to encrypt/decrypt strings.
  */
+<<<<<<< HEAD
 	Configure::write('Security.cipherSeed', '95835937826878473434742328753');
 
 /**
  * Apply timestamps with the last modified time to static assets (js, css, images).
  * Will append a querystring parameter containing the time the file was modified. This is
+=======
+	//Configure::write('Security.cipherSeed', '76859309657453542496749683645');
+	Configure::write('Security.cipherSeed', '24552527862924798929825389737');
+
+/**
+ * Apply timestamps with the last modified time to static assets (js, css, images).
+ * Will append a query string parameter containing the time the file was modified. This is
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  * useful for invalidating browser caches.
  *
  * Set to `true` to apply timestamps when debug > 0. Set to 'force' to always enable
@@ -223,7 +303,11 @@
 	//Configure::write('Asset.filter.js', 'custom_javascript_output_filter.php');
 
 /**
+<<<<<<< HEAD
  * The classname and database used in CakePHP's
+=======
+ * The class name and database used in CakePHP's
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  * access control lists.
  */
 	Configure::write('Acl.classname', 'DbAcl');
@@ -236,6 +320,7 @@
 	//date_default_timezone_set('UTC');
 
 /**
+<<<<<<< HEAD
  * Pick the caching engine to use.  If APC is enabled use it.
  * If running via cli - apc is disabled by default. ensure it's available and enabled in this case
  *
@@ -251,6 +336,83 @@ if (extension_loaded('apc') && function_exists('apc_dec') && (php_sapi_name() !=
 // In development mode, caches should expire quickly.
 $duration = '+999 days';
 if (Configure::read('debug') >= 1) {
+=======
+ *
+ * Cache Engine Configuration
+ * Default settings provided below
+ *
+ * File storage engine.
+ *
+ * 	 Cache::config('default', array(
+ *		'engine' => 'File', //[required]
+ *		'duration' => 3600, //[optional]
+ *		'probability' => 100, //[optional]
+ * 		'path' => CACHE, //[optional] use system tmp directory - remember to use absolute path
+ * 		'prefix' => 'cake_', //[optional]  prefix every cache file with this string
+ * 		'lock' => false, //[optional]  use file locking
+ * 		'serialize' => true, [optional]
+ *	));
+ *
+ * APC (http://pecl.php.net/package/APC)
+ *
+ * 	 Cache::config('default', array(
+ *		'engine' => 'Apc', //[required]
+ *		'duration' => 3600, //[optional]
+ *		'probability' => 100, //[optional]
+ * 		'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
+ *	));
+ *
+ * Xcache (http://xcache.lighttpd.net/)
+ *
+ * 	 Cache::config('default', array(
+ *		'engine' => 'Xcache', //[required]
+ *		'duration' => 3600, //[optional]
+ *		'probability' => 100, //[optional]
+ *		'prefix' => Inflector::slug(APP_DIR) . '_', //[optional] prefix every cache file with this string
+ *		'user' => 'user', //user from xcache.admin.user settings
+ *		'password' => 'password', //plaintext password (xcache.admin.pass)
+ *	));
+ *
+ * Memcache (http://www.danga.com/memcached/)
+ *
+ * 	 Cache::config('default', array(
+ *		'engine' => 'Memcache', //[required]
+ *		'duration' => 3600, //[optional]
+ *		'probability' => 100, //[optional]
+ * 		'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
+ * 		'servers' => array(
+ * 			'127.0.0.1:11211' // localhost, default port 11211
+ * 		), //[optional]
+ * 		'persistent' => true, // [optional] set this to false for non-persistent connections
+ * 		'compress' => false, // [optional] compress data in Memcache (slower, but uses less memory)
+ *	));
+ *
+ *  Wincache (http://php.net/wincache)
+ *
+ * 	 Cache::config('default', array(
+ *		'engine' => 'Wincache', //[required]
+ *		'duration' => 3600, //[optional]
+ *		'probability' => 100, //[optional]
+ *		'prefix' => Inflector::slug(APP_DIR) . '_', //[optional]  prefix every cache file with this string
+ *	));
+ */
+
+/**
+ * Configure the cache handlers that CakePHP will use for internal
+ * metadata like class maps, and model schema.
+ *
+ * By default File is used, but for improved performance you should use APC.
+ *
+ * Note: 'default' and other application caches should be configured in app/Config/bootstrap.php.
+ *       Please check the comments in bootstrap.php for more info on the cache engines available
+ *       and their settings.
+ */
+$engine = 'File';
+
+// In development mode, caches should expire quickly.
+$duration = '+999 days';
+if (Configure::read('debug') > 0) {
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 	$duration = '+10 seconds';
 }
 
@@ -258,7 +420,11 @@ if (Configure::read('debug') >= 1) {
 $prefix = 'myapp_';
 
 /**
+<<<<<<< HEAD
  * Configure the cache used for general framework caching.  Path information,
+=======
+ * Configure the cache used for general framework caching. Path information,
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  * object listings, and translation cache files are stored with this configuration.
  */
 Cache::config('_cake_core_', array(
@@ -270,7 +436,11 @@ Cache::config('_cake_core_', array(
 ));
 
 /**
+<<<<<<< HEAD
  * Configure the cache for model and datasource caches.  This cache configuration
+=======
+ * Configure the cache for model and datasource caches. This cache configuration
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  * is used to store schema descriptions, and table listings in connections.
  */
 Cache::config('_cake_model_', array(

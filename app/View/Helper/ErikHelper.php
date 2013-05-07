@@ -52,7 +52,11 @@ class ErikHelper extends AppHelper {
 		$continua=false;
 
 		if(in_array($value['slug'],array('home','Home'))){
+<<<<<<< HEAD
 			$slug= $this->webroot;
+=======
+			$slug= HtmlHelper::url('/');
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 		}else{
 			$slug=$value['slug'];
 		}

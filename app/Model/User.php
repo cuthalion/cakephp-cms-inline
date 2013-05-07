@@ -1,8 +1,14 @@
 <?php
+<<<<<<< HEAD
 App::uses('AuthComponent', 'Controller/Component');
 class User extends AppModel {
 	public $name = 'User';
     public $validate = array(
+=======
+class User extends AppModel {
+	
+	    public $validate = array(
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
         'username' => array(
             'required' => array(
                 'rule' => array('notEmpty'),
@@ -61,6 +67,7 @@ class User extends AppModel {
 		}
 		return true;
 	}
+<<<<<<< HEAD
 	
 	public function beforeSave($options = array()) {
 		if (isset($this->data[$this->alias]['password'])) {
@@ -68,4 +75,16 @@ class User extends AppModel {
 		}
 		return true;
 	}
+=======
+
+	
+	
+	public function beforeSave($options = array()) {
+        if (isset($this->data['User']['password'])) {
+            $hash = Security::hash($this->data['User']['password'], 'blowfish');
+            $this->data['User']['password'] = $hash;
+        }
+        return true;
+    }
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 }

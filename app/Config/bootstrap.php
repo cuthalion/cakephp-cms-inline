@@ -11,18 +11,29 @@
  * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+<<<<<<< HEAD
  * Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
  * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+=======
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  * @link          http://cakephp.org CakePHP(tm) Project
  * @package       app.Config
  * @since         CakePHP(tm) v 0.10.8.2117
  * @license       MIT License (http://www.opensource.org/licenses/mit-license.php)
  */
 
+<<<<<<< HEAD
 /**
  * Cache Engine Configuration
  * Default settings provided below
@@ -96,6 +107,9 @@
  *		'persistent' => true, // [optional] set this to false for non-persistent connections
  *	));
  */
+=======
+// Setup a 'default' cache configuration for use in the application.
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 Cache::config('default', array('engine' => 'File'));
 
 /**
@@ -143,11 +157,16 @@ Cache::config('default', array('engine' => 'File'));
  *
  */
 
+<<<<<<< HEAD
 //CakePlugin::loadAll();
 CakePlugin::loadAll();
 
 /**
  * You can attach event listeners to the request lifecyle as Dispatcher Filter . By Default CakePHP bundles two filters:
+=======
+/**
+ * You can attach event listeners to the request lifecycle as Dispatcher Filter . By Default CakePHP bundles two filters:
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  *
  * - AssetDispatcher filter will serve your asset files (css, images, js, etc) from your themes and plugins
  * - CacheDispatcher filter will read the Cache.check configure variable and try to serve cached content generated from controllers
@@ -181,5 +200,8 @@ CakeLog::config('error', array(
 	'types' => array('warning', 'error', 'critical', 'alert', 'emergency'),
 	'file' => 'error',
 ));
+<<<<<<< HEAD
 //CakePlugin::load(array('Minify' => array('routes' => true)));
+=======
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 include dirname(__FILE__).DS.'inflections.php';

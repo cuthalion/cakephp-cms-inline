@@ -7,12 +7,22 @@
  * PHP 5
  *
  * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+<<<<<<< HEAD
  * Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice.
  *
  * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+=======
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice.
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  * @link          http://cakephp.org CakePHP(tm) Project
  * @package       app.webroot
  * @since         CakePHP(tm) v 0.2.9
@@ -24,6 +34,10 @@
 if (!defined('DS')) {
 	define('DS', DIRECTORY_SEPARATOR);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 /**
  * These defines should only be edited if you have cake installed in
  * a directory layout other than the way it is distributed.
@@ -37,6 +51,10 @@ if (!defined('DS')) {
 if (!defined('ROOT')) {
 	define('ROOT', dirname(dirname(dirname(__FILE__))));
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 /**
  * The actual directory name for the "app".
  *
@@ -51,12 +69,24 @@ if (!defined('APP_DIR')) {
  * Un-comment this line to specify a fixed path to CakePHP.
  * This should point at the directory containing `Cake`.
  *
+<<<<<<< HEAD
  * For ease of development CakePHP uses PHP's include_path.  If you
  * cannot modify your include_path set this value.
  *
  * Leaving this constant undefined will result in it being defined in Cake/bootstrap.php
  */
 	//define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib');
+=======
+ * For ease of development CakePHP uses PHP's include_path. If you
+ * cannot modify your include_path set this value.
+ *
+ * Leaving this constant undefined will result in it being defined in Cake/bootstrap.php
+ *
+ * The following line differs from its sibling
+ * /lib/Cake/Console/Templates/skel/webroot/index.php
+ */
+//define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib');
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 
 /**
  * Editing below this line should NOT be necessary.
@@ -70,6 +100,17 @@ if (!defined('WWW_ROOT')) {
 	define('WWW_ROOT', dirname(__FILE__) . DS);
 }
 
+<<<<<<< HEAD
+=======
+// for built-in server
+if (php_sapi_name() == 'cli-server') {
+	if ($_SERVER['REQUEST_URI'] !== '/' && file_exists(WWW_ROOT . $_SERVER['REQUEST_URI'])) {
+		return false;
+	}
+	$_SERVER['PHP_SELF'] = '/' . basename(__FILE__);
+}
+
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 if (!defined('CAKE_CORE_INCLUDE_PATH')) {
 	if (function_exists('ini_set')) {
 		ini_set('include_path', ROOT . DS . 'lib' . PATH_SEPARATOR . ini_get('include_path'));
@@ -83,10 +124,21 @@ if (!defined('CAKE_CORE_INCLUDE_PATH')) {
 	}
 }
 if (!empty($failed)) {
+<<<<<<< HEAD
 	trigger_error("CakePHP core could not be found.  Check the value of CAKE_CORE_INCLUDE_PATH in APP/webroot/index.php.  It should point to the directory containing your " . DS . "cake core directory and your " . DS . "vendors root directory.", E_USER_ERROR);
+=======
+	trigger_error("CakePHP core could not be found. Check the value of CAKE_CORE_INCLUDE_PATH in APP/webroot/index.php. It should point to the directory containing your " . DS . "cake core directory and your " . DS . "vendors root directory.", E_USER_ERROR);
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 }
 
 App::uses('Dispatcher', 'Routing');
 
 $Dispatcher = new Dispatcher();
+<<<<<<< HEAD
 $Dispatcher->dispatch(new CakeRequest(), new CakeResponse(array('charset' => Configure::read('App.encoding'))));
+=======
+$Dispatcher->dispatch(
+	new CakeRequest(),
+	new CakeResponse()
+);
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266

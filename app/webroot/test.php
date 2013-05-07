@@ -5,12 +5,22 @@
  * PHP 5
  *
  * CakePHP(tm) Tests <http://book.cakephp.org/2.0/en/development/testing.html>
+<<<<<<< HEAD
  * Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
  *
  * Licensed under The MIT License
  * Redistributions of files must retain the above copyright notice
  *
  * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+=======
+ * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+ *
+ * Licensed under The MIT License
+ * For full copyright and license information, please see the LICENSE.txt
+ * Redistributions of files must retain the above copyright notice
+ *
+ * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
  * @link          http://book.cakephp.org/2.0/en/development/testing.html
  * @package       app.webroot
  * @since         CakePHP(tm) v 1.2.0.4433
@@ -24,6 +34,10 @@ ini_set('display_errors', 1);
 if (!defined('DS')) {
 	define('DS', DIRECTORY_SEPARATOR);
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 /**
  * These defines should only be edited if you have cake installed in
  * a directory layout other than the way it is distributed.
@@ -37,6 +51,10 @@ if (!defined('DS')) {
 if (!defined('ROOT')) {
 	define('ROOT', dirname(dirname(dirname(__FILE__))));
 }
+<<<<<<< HEAD
+=======
+
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 /**
  * The actual directory name for the "app".
  *
@@ -48,12 +66,24 @@ if (!defined('APP_DIR')) {
 /**
  * The absolute path to the "Cake" directory, WITHOUT a trailing DS.
  *
+<<<<<<< HEAD
  * For ease of development CakePHP uses PHP's include_path.  If you
  * need to cannot modify your include_path, you can set this path.
  *
  * Leaving this constant undefined will result in it being defined in Cake/bootstrap.php
  */
 	//define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib');
+=======
+ * For ease of development CakePHP uses PHP's include_path. If you
+ * need to cannot modify your include_path, you can set this path.
+ *
+ * Leaving this constant undefined will result in it being defined in Cake/bootstrap.php
+ *
+ * The following line differs from its sibling
+ * /lib/Cake/Console/Templates/skel/webroot/test.php
+ */
+//define('CAKE_CORE_INCLUDE_PATH', ROOT . DS . 'lib');
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 
 /**
  * Editing below this line should not be necessary.
@@ -80,11 +110,19 @@ if (!defined('CAKE_CORE_INCLUDE_PATH')) {
 	}
 }
 if (!empty($failed)) {
+<<<<<<< HEAD
 	trigger_error("CakePHP core could not be found.  Check the value of CAKE_CORE_INCLUDE_PATH in APP/webroot/index.php.  It should point to the directory containing your " . DS . "cake core directory and your " . DS . "vendors root directory.", E_USER_ERROR);
 }
 
 if (Configure::read('debug') < 1) {
 	die(__d('cake_dev', 'Debug setting does not allow access to this url.'));
+=======
+	trigger_error("CakePHP core could not be found. Check the value of CAKE_CORE_INCLUDE_PATH in APP/webroot/index.php. It should point to the directory containing your " . DS . "cake core directory and your " . DS . "vendors root directory.", E_USER_ERROR);
+}
+
+if (Configure::read('debug') < 1) {
+	throw new NotFoundException(__d('cake_dev', 'Debug setting does not allow access to this url.'));
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 }
 
 require_once CAKE . 'TestSuite' . DS . 'CakeTestSuiteDispatcher.php';

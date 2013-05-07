@@ -6,12 +6,20 @@
 ; * PHP 5
 ; *
 ; * CakePHP(tm) : Rapid Development Framework (http://cakephp.org)
+<<<<<<< HEAD
 ; * Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+=======
+; * Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 ; *
 ; *  Licensed under The MIT License
 ; *  Redistributions of files must retain the above copyright notice.
 ; *
+<<<<<<< HEAD
 ; * @copyright     Copyright 2005-2012, Cake Software Foundation, Inc. (http://cakefoundation.org)
+=======
+; * @copyright     Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 ; * @link          http://cakephp.org CakePHP(tm) Project
 ; * @package       app.Config
 ; * @since         CakePHP(tm) v 0.10.0.1076

@@ -1,8 +1,15 @@
 # $Id$
 #
+<<<<<<< HEAD
 # Copyright 2005-2012, Cake Software Foundation, Inc.
 #
 # Licensed under The MIT License
+=======
+# Copyright (c) Cake Software Foundation, Inc. (http://cakefoundation.org)
+#
+# Licensed under The MIT License
+# For full copyright and license information, please see the LICENSE.txt
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 # Redistributions of files must retain the above copyright notice.
 # MIT License (http://www.opensource.org/licenses/mit-license.php)
 

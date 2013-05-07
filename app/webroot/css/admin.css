@@ -20,7 +20,11 @@
 .admin-menu{
 	top:20px;
 	right:20px;
+<<<<<<< HEAD
 	width:600px;
+=======
+	width:550px;
+>>>>>>> f4e6305d6ec87630dc98d7873ef0e43ad50f9266
 }
 
 .admin-menu li a,.admin-menu-pagina li a{
