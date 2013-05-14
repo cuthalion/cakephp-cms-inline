@@ -77,6 +77,7 @@ class AppModel extends Model {
 		$data=explode('-',$data);
 
 		switch ($data[1]){
+			case '00':$mes = "none"; break;
 			case '01':$mes = "Janeiro"; break;
 			case '02':$mes = "Fevereiro"; break;
 			case '03':$mes = "Março"; break;
