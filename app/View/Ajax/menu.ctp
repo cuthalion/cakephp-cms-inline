@@ -1,1 +1,0 @@
-<?php $this->element('seo');?>[{"legenda":"Banner Slider","url":"Banners"},{"legenda":"Páginas","url":"Paginas"},{"legenda":"Imagens","url":"Imagens"}]
