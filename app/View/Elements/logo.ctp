@@ -1,0 +1,1 @@
+<a class="brand" href="<?php echo $this->Link->home() ?>"><?php echo $logo;?></a>

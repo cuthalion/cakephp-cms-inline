@@ -1,0 +1,1 @@
+<?php $this->element('seo');?><?php echo json_encode($controllers);?>

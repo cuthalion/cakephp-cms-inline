@@ -1,0 +1,153 @@
+/* CSS Document */
+
+#minha-janela,#preloader{
+	z-index:3;
+}
+.modal-backdrop{
+	z-index:2;
+}
+
+.admin-menu,.admin-menu-pagina,.admin-menu-admin{
+	position:fixed;
+	cursor:move;
+	z-index:1;
+}
+
+.navbar-fixed-top {
+	z-index:0;
+}
+
+.admin-menu{
+	top:20px;
+	right:20px;
+	width:600px;
+}
+
+.admin-menu li a,.admin-menu-pagina li a{
+	cursor:pointer !important;
+}
+
+.admin-menu-pagina{
+	top:20px;
+	left:20px;
+	width:160px;
+}
+
+.admin-menu-admin{
+	bottom:20px;
+	left:20px;
+	width:260px;
+}
+.admin-menu-admin ul{
+	width:100%;
+}
+.admin-menu-admin ul li,.admin-menu-admin ul li a{
+	display:block;
+	float:none !important;
+}
+
+.admin-menu-admin ul li a i{
+	margin-right:5px;
+}
+
+.admin-menu-pagina .navbar-inner{
+	padding-bottom:10px;
+}
+
+.admin-menu-pagina .disabled,.desabilita{
+	opacity:0.5;
+	cursor:default  !important;
+}
+
+.nav.icons li a {
+	padding:5px 9px 5px 7px;
+}
+.nav.icons li a:hover {
+	background:#CCC;
+}
+
+.red {
+	color:#900;
+}
+
+.conteudo .row{
+	cursor:pointer;
+}
+
+.row.admin-field{
+	padding:10px 0;
+}
+
+.row.admin-field:hover, .row-ativo {
+	background-color:#FFFFE6;
+}
+
+.row-ativo{
+	outline:1px solid #FFFFBF;
+}
+
+.row.admin-field:hover [class*="span"], .coluna-ativo{
+	background-color:#FFC;
+}
+
+.coluna-ativo{
+	outline:1px solid #FF9;
+}
+
+.table-ajax {
+	margin-bottom:15px !important;
+}
+.table-acoes{
+	white-space:nowrap;
+}
+.pagina-controller{
+	width:100%;
+	display:table;
+}
+.remove {
+	width:0;
+	height:0;
+	overflow:hidden;
+}
+.form-ajax-ckeditor #cke_editor{
+	height:200px;
+	overflow:hidden;
+}
+
+a.marcador {
+	position:relative;
+}
+span.marcador {
+	position:absolute;
+	top:-5px;
+	right:0;
+	padding:0 5px;
+}
+.btn-super-mini{
+	padding: 0 3px;
+	font-size: 8.5px;
+	line-height:15px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+}
+.cke_editable.cke_editable_inline.cke_focus
+{
+	box-shadow: inset 0px 0px 20px 3px #ddd, inset 0 0 1px #000;
+	outline: none;
+	background: #eee;
+	cursor: text;
+}
+.tema-grid,#preloader .modal-header,.text-center{
+	text-align:center;
+}
+.tema-grid{
+	display:inline-block;
+	vertical-align:top;
+}
+.tema-grid img{
+	width:240px;
+}
+.navbar .nav>li>a{
+	padding:10px;
+}
